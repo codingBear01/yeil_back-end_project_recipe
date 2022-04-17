@@ -1,6 +1,7 @@
 import json
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import User, Ingredients, Food
 
@@ -19,6 +20,7 @@ def index(request):
     )
 
 
+@csrf_exempt
 def recipe(request):
     ingredients = Ingredients.objects.all().order_by("name")
 
