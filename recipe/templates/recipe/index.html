@@ -16,18 +16,20 @@
     <button type="submit">Show Me The Recipe!</button>
   </form>
 
-  <div class="ingredient_wrapper">
-    <div>선택한 재료: </div>
-    {% for ingredient in checkedIngredients %}
-    <div class="selected-ingredient">{{ ingredient }}</div>
-    {% endfor %}
-  </div>
-
-  <div class="video-title_wrapper">
-    <div>추천 레시피: </div>
-    {% for food in foodSet %}
-    <div class="video-title">{{ food.name }}</div>
-    {% endfor %}
+  <div class="wrapper">
+    <div class="ingredient_wrapper">
+      <div>선택한 재료: </div>
+      {% for ingredient in checkedIngredients %}
+      <div class="selected-ingredient">{{ ingredient }}</div>
+      {% endfor %}
+    </div>
+    
+    <div class="video-title_wrapper">
+      <div>추천 레시피: </div>
+      {% for food in foodSet %}
+      <div class="video-title">{{ food.name }}</div>
+      {% endfor %}
+    </div>
   </div>
   
   <div class="video_container">
