@@ -43,11 +43,14 @@ form {
 
   .video_wrapper {
     display: flex;
-    padding: 15px;
     width: 620px;
     overflow: scroll;
     white-space: nowrap;
     border: $border;
+
+    .video {
+      margin: 10px 20px;
+    }
   }
 }
 .wrapper {

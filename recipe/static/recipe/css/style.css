@@ -38,11 +38,13 @@ form button {
 }
 .video_container .video_wrapper {
   display: flex;
-  padding: 15px;
   width: 620px;
   overflow: scroll;
   white-space: nowrap;
   border: 2px solid rgb(230, 230, 230);
+}
+.video_container .video_wrapper .video {
+  margin: 10px 20px;
 }
 
 .wrapper {
