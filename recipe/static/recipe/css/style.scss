@@ -1,0 +1,59 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+div {
+  margin: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin: 10px 0;
+    width: 200px;
+    height: 30px;
+  }
+}
+
+.video_container {
+  width: 100%;
+
+  .video_wrapper {
+    display: flex;
+    width: 560px;
+    overflow: scroll;
+    white-space: nowrap;
+  }
+}
+
+.ingredient_wrapper,
+.video-title_wrapper,
+.video_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .selected-ingredient,
+  .video-title {
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.scss.map */

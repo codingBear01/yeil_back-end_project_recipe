@@ -1,0 +1,44 @@
+{% extends "recipe/layout.html" %}
+{% load static %}
+
+{% block body %}
+  <h1>재료를 골라보세요!</h1>
+  <form action="{% url 'recipe' %}" method="POST">
+    {% csrf_token %}
+    <div>
+      {% for ingredient in ingredients %}
+      <label>
+        <input type="checkbox" name="checkedIngredients" value="{{ ingredient.name }}"/>
+        {{ ingredient.name }}
+      </label>  
+      {% endfor %}
+    </div>
+    <button type="submit">Show Me The Recipe!</button>
+  </form>
+
+  <div class="ingredient_wrapper">
+    <div>선택한 재료: </div>
+    {% for ingredient in checkedIngredients %}
+    <div class="selected-ingredient">{{ ingredient }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="video-title_wrapper">
+    <div>추천 레시피: </div>
+    {% for food in foodSet %}
+    <div class="video-title">{{ food.name }}</div>
+    {% endfor %}
+  </div>
+  
+  <div class="video_container">
+    <div class="video_wrapper">
+    {% for food in foodSet %}
+        <div class="video" value="{{ food.recipeUrl }}"></div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'recipe/javascript/app.js' %}"></script>
+{% endblock %}
